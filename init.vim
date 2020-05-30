@@ -67,6 +67,7 @@ Plug 'honza/vim-snippets'
 "" Color
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
+Plug 'vim-scripts/Zenburn'
 
 "*****************************************************************************
 "" Custom bundles
@@ -180,7 +181,7 @@ set ruler
 set number
 
 let no_buffers_menu=1
-colorscheme gruvbox
+colorscheme zenburn
 
 set mousemodel=popup
 set t_Co=256
@@ -634,3 +635,25 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+
+
+"*****************************************************************************
+"" NERDTree
+"*****************************************************************************
+" Opens NERDTree with <Tab>.
+nmap <Tab> :NERDTreeTabsToggle<CR>
+
+" Makes NERDTree more wider.
+let NERDTreeWinSize = 40
+
+" NERDTree appears on left
+let g:NERDTreeWinPos = "left"
+
+
+"*****************************************************************************
+"" Tab navigation
+"*****************************************************************************
+"
+nmap <S-j> :tabprevious<CR>
+nmap <S-k> :tabnext<CR>
+
