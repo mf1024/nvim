@@ -66,6 +66,7 @@ Plug 'honza/vim-snippets'
 
 "" Color
 Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 
 "*****************************************************************************
 "" Custom bundles
@@ -179,7 +180,7 @@ set ruler
 set number
 
 let no_buffers_menu=1
-silent! colorscheme molokai
+colorscheme gruvbox
 
 set mousemodel=popup
 set t_Co=256
