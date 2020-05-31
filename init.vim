@@ -68,6 +68,7 @@ Plug 'honza/vim-snippets'
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/Zenburn'
+Plug 'arcticicestudio/nord-vim'
 
 "*****************************************************************************
 "" Custom bundles
@@ -181,7 +182,7 @@ set ruler
 set number
 
 let no_buffers_menu=1
-colorscheme zenburn
+colorscheme nord
 
 set mousemodel=popup
 set t_Co=256
@@ -646,8 +647,7 @@ nmap <Tab> :NERDTreeTabsToggle<CR>
 " Makes NERDTree more wider.
 let NERDTreeWinSize = 40
 
-" NERDTree appears on left
-let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinPos = "right"
 
 
 "*****************************************************************************
@@ -656,4 +656,6 @@ let g:NERDTreeWinPos = "left"
 "
 nmap <S-j> :tabprevious<CR>
 nmap <S-k> :tabnext<CR>
+
+set nocompatible
 
