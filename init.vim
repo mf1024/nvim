@@ -69,6 +69,9 @@ Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/Zenburn'
 Plug 'arcticicestudio/nord-vim'
+Plug 'phanviet/vim-monokai-pro'
+Plug 'sickill/vim-monokai'
+Plug 'junegunn/seoul256.vim'
 
 "*****************************************************************************
 "" Custom bundles
@@ -182,7 +185,8 @@ set ruler
 set number
 
 let no_buffers_menu=1
-colorscheme nord
+let g:seoul256_background = 235 
+colorscheme seoul256
 
 set mousemodel=popup
 set t_Co=256
