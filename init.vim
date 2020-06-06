@@ -43,6 +43,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+Plug 'tpope/vim-surround'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -185,8 +186,9 @@ set ruler
 set number
 
 let no_buffers_menu=1
-let g:seoul256_background = 235 
-colorscheme seoul256
+let g:seoul256_background = 235
+let g:seoul256_light_background = 256
+colorscheme seoul256-light
 
 set mousemodel=popup
 set t_Co=256
