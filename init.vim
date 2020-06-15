@@ -275,6 +275,14 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
+" Opens NERDTree with <Tab>.
+nmap § :NERDTreeTabsToggle<CR>
+
+" Makes NERDTree wider
+let NERDTreeWinSize = 40
+let g:NERDTreeWinPos = "right"
+
+
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
 let Grep_Default_Options = '-IR'
@@ -336,6 +344,8 @@ set autoread
 "" Mappings
 "*****************************************************************************
 
+noremap <Leader>w :w<CR>
+
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
@@ -355,6 +365,9 @@ nnoremap <leader>so :OpenSession<Space>
 nnoremap <leader>ss :SaveSession<Space>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
+
+"" Remap Esc to jj
+inoremap jj <Esc>
 
 "" Tabs
 nnoremap <Tab> gt
@@ -430,9 +443,7 @@ endif
 
 "" Buffer nav
 noremap <leader>z :bp<CR>
-noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
 
 "" Close buffer
 noremap <leader>c :bd<CR>
@@ -494,6 +505,7 @@ let g:go_highlight_space_tab_error = 0
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
+let g:go_doc_keywordprg_enabled = 0 
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
@@ -647,21 +659,5 @@ endif
 "*****************************************************************************
 "" NERDTree
 "*****************************************************************************
-" Opens NERDTree with <Tab>.
-nmap <Tab> :NERDTreeTabsToggle<CR>
-
-" Makes NERDTree more wider.
-let NERDTreeWinSize = 40
-
-let g:NERDTreeWinPos = "right"
-
-
-"*****************************************************************************
-"" Tab navigation
-"*****************************************************************************
-"
-nmap <S-j> :tabprevious<CR>
-nmap <S-k> :tabnext<CR>
 
 set nocompatible
-
