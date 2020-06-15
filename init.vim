@@ -153,7 +153,7 @@ set shiftwidth=4
 set expandtab
 
 "" Map leader to ,
-let mapleader=','
+let mapleader="\<Space>"
 
 "" Enable hidden buffers
 set hidden
@@ -365,9 +365,6 @@ nnoremap <leader>so :OpenSession<Space>
 nnoremap <leader>ss :SaveSession<Space>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
-
-"" Remap Esc to jj
-inoremap jj <Esc>
 
 "" Tabs
 nnoremap <Tab> gt
